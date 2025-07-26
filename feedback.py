@@ -37,6 +37,7 @@ async def delayed_forward(update: Update, context: ContextTypes.DEFAULT_TYPE):
 app = ApplicationBuilder().token(BOT_TOKEN).build()
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CommandHandler("feedback", feedback))
-app.add_handler(MessageHandler(filters.PHOTO | filters.VIDEO | filters.DOCUMENT, delayed_forward))
+app.add_handler(MessageHandler(filters.PHOTO | filters.VIDEO | filters.DOCUMENT )
+                              
 
 app.run_polling()
